@@ -256,9 +256,9 @@ class _widget:
         self.label_simtype = Label("Simulation Type")
         self.property_simtype = RadioButtons(options=['Relax', 'Run until'])
         self.property_simtype.observe(on_change_simtype)
-        self.property_rununtil = FloatText(value=10e-9)
+        self.property_rununtil = FloatText(description='Simulation Time', value=10e-9)
         self.property_rununtil.layout.visibility = 'hidden'
-        self.property_stopping_mxHxm = FloatText(value=0.01)
+        self.property_stopping_mxHxm = FloatText(description='Stopping m x H x m value', value=0.01)
         self.get_code_button = Button(description="Generate Code")
         self.page3 = Box([HBox([self.label_dt, self.property_dt]),
                           self.property_saveevery, self.property_maxsteps,
